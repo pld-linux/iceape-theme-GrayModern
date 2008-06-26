@@ -4,16 +4,19 @@ Summary:	Theme like Modern, only gray
 Summary(pl.UTF-8):	Motyw identyczny jak Modern, tylko że szary
 Name:		iceape-theme-GrayModern
 Version:	2007.06.18
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Networking
-Source0:	http://mozilla-themes.schellen.net/%{_realname}_%{_snap}.jar
-# Source0-md5:	7b61f2e7c1ecd7e225d5be44d521634b
+#Source0:	http://mozilla-themes.schellen.net/%{_realname}_%{_snap}.jar
+# version with non-free logos replaced
+Source0:	%{_realname}_%{_snap}.jar
+# Source0-md5:	d464a95d4923aab870312d4409b88fb5
 Source1:	gen-installed-chrome.sh
 URL:		http://mozilla-themes.schellen.net/
 Requires(post,postun):	iceape >= 1.1
 Requires(post,postun):	textutils
 Requires:	iceape >= 1.1
+Obsoletes:	seamonkey-theme-GrayModern
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
